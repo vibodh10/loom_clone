@@ -1,0 +1,6 @@
+{
+  "databaseURL": "https://Hima-Bindu-s-workspace-sugv9l.eu-west-1.xata.sh/db/jsm_snapcast",
+  "codegen": {
+    "output": "src/xata.ts"
+  }
+}
