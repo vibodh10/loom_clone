@@ -15,7 +15,7 @@ const Navbar = () => {
             <nav>
                 <Link href="/">
                     <Image src="/assets/icons/logo.svg" alt="logo" width={32} height={32} />
-                    <h1>SnapCast</h1>
+                    <h1 className="dark:text-white">SnapCast</h1>
                 </Link>
 
                 {user && (
