@@ -16,7 +16,7 @@ const Header = ({ subHeader, title, userImg }: SharedHeaderProps) => {
 
                     <article>
                         <p>{subHeader}</p>
-                        <h1>{title}</h1>
+                        <h1 className="dark:text-white">{title}</h1>
                     </article>
                 </div>
                 
