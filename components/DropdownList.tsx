@@ -11,7 +11,7 @@ const DropdownList = () => {
         <div className="relative">
             <div className="cursor-pointer" onClick={() => setIsOpen(!isOpen)}>
                 <div className="filter-trigger">
-                    <figure>
+                    <figure className="dark:text-white">
                         <Image src="/assets/icons/hamburger.svg" alt="menu" width={14} height={14} />
                         Most recent
                     </figure>
