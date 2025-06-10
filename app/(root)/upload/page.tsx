@@ -153,7 +153,7 @@ const Page = () => {
 
     return (
         <div className="wrapper-md upload-page">
-            <h1>Upload a video</h1>
+            <h1 className="dark:text-white">Upload a video</h1>
 
             {error && <div className="error-field">{error}</div>}
 
