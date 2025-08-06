@@ -1,11 +1,14 @@
-'use client'
+'use client';
 
-import React from 'react'
+import React, {useState} from 'react'
 import Link from "next/link";
 import Image from "next/image";
 import {authClient} from "@/lib/auth-client";
+import Spinner from "@/components/Spinner";
 
 const Page = () => {
+    const [isLoading, setIsLoading] = useState(false);
+
     return (
         <main className="sign-in">
             <aside className="testimonial">
@@ -44,6 +47,8 @@ const Page = () => {
                     <p>Create and share your very first <span>SnapCast video</span> in no time!</p>
                     <button
                         onClick={async () => {
+                            setIsLoading(true);
+
                             return await authClient.signIn.social({
                                 provider: 'google',
                             });
@@ -51,6 +56,10 @@ const Page = () => {
                     >
                         <Image src="/assets/icons/google.svg" alt="google" width={22} height={22} />
                         <span>Sign in with Google</span>
+
+                        {isLoading && (
+                            <Spinner />
+                        )}
                     </button>
                 </section>
             </aside>

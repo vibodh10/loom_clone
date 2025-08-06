@@ -1,7 +1,7 @@
 const FormField = ({ id, label, type = "text", value, onChange, placeholder, as = "input", options = []}: FormFieldProps) => {
     return (
         <div className="form-field">
-            <label htmlFor={id}>{label}</label>
+            <label htmlFor={id} className="dark:text-white">{label}</label>
 
             { as === 'textarea' ?
                 (
@@ -11,6 +11,7 @@ const FormField = ({ id, label, type = "text", value, onChange, placeholder, as 
                         value={value}
                         onChange={onChange}
                         placeholder={placeholder}
+                        className="dark:text-white"
                     />
                 ) : as === 'select' ? (
                         <select
@@ -20,7 +21,7 @@ const FormField = ({ id, label, type = "text", value, onChange, placeholder, as 
                             onChange={onChange}
                         >
                             {options.map(({ label, value }) => (
-                                <option key={label} value={value}>{label}</option>
+                                <option key={label} value={value} className="dark:text-white">{label}</option>
                             ))}
                         </select>
                 ): (
